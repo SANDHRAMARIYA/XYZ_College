@@ -1,0 +1,101 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="row g-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+<label for="" class="form-label">Name</label>
+<input type="text" placeholder="Enter your name" class="form-control" name="name" [(ngModel)]="name">
+
+
+        </div>
+        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <label for="" class="form-label">RollNum</label>
+            <input type="text" placeholder="Enter your rollnum" class="form-control" name="rollnum" [(ngModel)]="rollnum">
+
+
+        </div>
+        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <label for="" class="form-label">AdmnNum</label>
+            <input type="text" placeholder="Enter your admnnum" class="form-control" name="admnnum" [(ngModel)]="admnnum">
+
+
+        </div>
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <label for="" class="form-label">College</label>
+            <textarea name="collegename" [(ngModel)]="collegename" placeholder="Enter your college" id="" cols="30" rows="10" class="form-control"></textarea>
+
+
+        </div>
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <label for="" class="form-label">Department</label>
+<select name="department" id="" placeholder="Enter your dept" class="form-control" [(ngModel)]="department">
+
+    <option value="Computer Science">Computer Science</option>
+    <option value="Mechanical Engineering">Mechanical Engineering</option>
+    <option value="Civil Engineering">Civil Engineering</option>
+    <option value="Electrical Engineering">Electrical Engineering</option>
+    
+</select>
+
+        </div>
+        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <label for="" class="form-label">Blood Group</label>
+            <select name="blood" id="" placeholder="Enter the blood group" class="form-control" [(ngModel)]="blood">
+                
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="A+">A+</option>
+                <option value="B">B+</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+
+        </div>
+        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <label for="" class="form-label">DOB</label>
+            <input type="date" placeholder="Enter your dob" class="form-control" name="dob" [(ngModel)]="dob">
+
+
+
+        </div>
+        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <label for="" class="form-label">Parent Name</label>
+            <input type="text" placeholder="Enter your parent name" class="form-control" name="parentname" [(ngModel)]="parentname">
+
+
+       
+        </div>
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <label for="" class="form-label">Parent Email</label>
+            <input type="email" placeholder="Enter parent mail id" class="form-control" name="pemail" [(ngModel)]="pemail">
+
+      
+    </div>
+        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <label for="" class="form-label">Guardian Name</label>
+            <input type="text" placeholder="Enter your guardian name" class="form-control" name="gname" [(ngModel)]="gname">
+
+
+        </div>
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <label for="" class="form-label">Guardian Address</label>
+            <textarea name="gaddress" [(ngModel)]="gaddress" placeholder="Enter the address" id="" cols="30" rows="10" class="form-control"></textarea>
+        
+
+
+        </div>
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+<button class="btn btn-primary" (click)="readValues()" [disabled]="status">Submit</button>
+
+
+        </div>
+       
+    </div>
+</div>
+</div>
+</div>
+
+
+
