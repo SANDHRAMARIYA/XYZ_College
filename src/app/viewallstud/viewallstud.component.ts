@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-viewallstud',
@@ -7,12 +8,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewallstudComponent implements OnInit {
 
-  constructor() { }
+  constructor(private myapi:ApiService) { 
+    this.fetchData()
+  }
 
-  studentsData:any=[
-    {"name":"Liya","rollnum":"1","admnnum":"2221","collegename":"xyz college","department":"civil engineering","blood":"B+","dob":"20-05-2001","parentname":"Jimmy","pemail":"jimmy02@gmail.com","gname":"Jimmy Mathew","gaddress":"Thottupuram(h)"},
-    {"name":"Anna","rollnum":"2","admnnum":"2222","collegename":"xyz college","department":"civil engineering","blood":"B+","dob":"22-09-2001","parentname":"Benny","pemail":"benny02@gmail.com","gname":"Benny Mathew","gaddress":"Thottumkal(h)"}
-  ]
+
+  fetchData=()=>{
+    this.myapi.viewstudent().subscribe(
+      (data)=>{
+        this.studentsData=data
+      }
+    )
+  }
+
+
+  deletestudent=(id:any)=>{
+    let data={
+      "id":id
+    }
+    this.myapi.deletestudent(data).subscribe(
+      (response)=>{
+        alert ("Deleted")
+      }
+    )
+    this.fetchData()
+  }
+  studentsData:any=[]
 
   ngOnInit(): void {
   }

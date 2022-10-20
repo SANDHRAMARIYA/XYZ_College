@@ -12,6 +12,7 @@ import { AddstudComponent } from './addstud/addstud.component';
 import { ViewallstudComponent } from './viewallstud/viewallstud.component';
 import { AddfaculComponent } from './addfacul/addfacul.component';
 import { ViewallfaculComponent } from './viewallfacul/viewallfacul.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes:Routes=[
   {
@@ -48,6 +49,7 @@ const appRoutes:Routes=[
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
+    HttpClientModule,
     FormsModule
   ],
   providers: [],
