@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-addfacul',
@@ -7,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddfaculComponent implements OnInit {
 
-  constructor() { }
+  constructor(private myapi:ApiService) { }
 
   name=""
   department=""
-  designation=""
+  
   dob=""
   education=""
   address=""
@@ -24,24 +25,31 @@ status:boolean=false
     let data={
       "name":this.name,
       "department":this.department,
-      "designation":this.dob,
+     
+      "dob":this.dob,
       "education":this.education,
       "address":this.address,
       "mobile":this.mobile,
       "doj":this.doj
     }
     console.log(data)
-    this.name=""
-    this.department=""
-    this.dob=""
-    this.education=""
-    this.address=""
-    this.mobile=""
-    this.doj=""
-    this.status=true
+    this.myapi.addfaculty(data).subscribe(
+      (response)=>{
+        console.log(response)
+        alert ("successfully added")
+        this.name=""
+        this.department=""
+       
+        this.dob=""
+        this.education=""
+        this.address=""
+        this.mobile=""
+        this.doj=""
+        this.status=true
+   
   }
-
-
+    )
+  }
 
   ngOnInit(): void {
   }

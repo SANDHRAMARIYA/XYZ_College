@@ -8,9 +8,10 @@
                 <table class="table table-bordered table-stripped-coloumns">
                     <thead>
                       <tr>
+                        <th scope="col">Id</th>
                         <th scope="col">Name</th>
                         <th scope="col">Department</th>
-                        <th scope="col">Designation</th>
+                        
                         <th scope="col">DOB</th>
                         <th scope="col">Education Qualification</th>
                         <th scope="col">Address</th>
@@ -20,14 +21,16 @@
                     </thead>
                     <tbody class="table-group-divider">
                       <tr *ngFor="let i of facultyData">
+                        <td>{{i.id}}</td>
                         <td>{{i.name}}</td>
                         <td>{{i.department}}</td>
-                        <td>{{i.designation}}</td>
+                        
                         <td>{{i.dob}}</td>
                         <td>{{i.education}}</td>
                         <td>{{i.address}}</td>
                         <td>{{i.mobile}}</td>
                         <td>{{i.doj}}</td>
+                        <td><button class="btn btn-danger" (click)="deletefaculty(i.id)">Delete</button></td>
                       </tr>
                      
                     </tbody>
