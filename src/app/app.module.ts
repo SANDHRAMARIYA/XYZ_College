@@ -13,6 +13,7 @@ import { ViewallstudComponent } from './viewallstud/viewallstud.component';
 import { AddfaculComponent } from './addfacul/addfacul.component';
 import { ViewallfaculComponent } from './viewallfacul/viewallfacul.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchstudComponent } from './searchstud/searchstud.component';
 
 const appRoutes:Routes=[
   {
@@ -32,6 +33,9 @@ const appRoutes:Routes=[
   },
   {
     path:"viewfaculty",component:ViewallfaculComponent
+  },
+  {
+    path:"searchstud",component:SearchstudComponent
   }
 ]
 @NgModule({
@@ -43,7 +47,8 @@ const appRoutes:Routes=[
     AddstudComponent,
     ViewallstudComponent,
     AddfaculComponent,
-    ViewallfaculComponent
+    ViewallfaculComponent,
+    SearchstudComponent
   ],
   imports: [
     BrowserModule,
